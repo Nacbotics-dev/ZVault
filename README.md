@@ -17,3 +17,11 @@ Currently there is only 2 types of vaults available:
 ## Why ZVault? 
 
 Well I'm really bad at saving tokens (paper hands), especially tokens I know would do well in the long run (The usually do) and by the time the do I must have sold the token and live in regret. So the idea of building a savings box just for me and the people that care came to me, yeah I know there are projects that offer this, but I'm a developer and can build one, So here I am building it out you're welcomed to join (it's open source after all).
+
+
+## Proposed UI for the project
+![ZVault Dashboard-1](https://github.com/Nacbotics-dev/ZVault/assets/93852266/c5e8df95-707f-4d3a-accc-08a7b654393a)
+![Zvault Landing Page](https://github.com/Nacbotics-dev/ZVault/assets/93852266/ed531657-ecda-4bc6-83a8-af9c0fb89764)
+
+
+
