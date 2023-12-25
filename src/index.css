@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    min-height: 100dvh;
+    background: radial-gradient(57.24% 366.29% at 138.26% 7.79%, rgba(255, 203, 116, 0.60) 8.97%, rgba(17, 62, 33, 0.60) 34.09%, rgba(17, 62, 33, 0.60) 46.14%, rgba(17, 62, 33, 0.60) 76.23%, rgba(17, 62, 33, 0.60) 89.26%), radial-gradient(447.81% 213.57% at -14.17% -56.9%, #113E21 22%, #FFCB74 81.57%);
+    /* filter: blur(1px); */
+}
