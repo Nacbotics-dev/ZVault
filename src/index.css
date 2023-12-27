@@ -1,8 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0;
+  
+  }
+
+
 body{
     min-height: 100dvh;
-    background: radial-gradient(57.24% 366.29% at 138.26% 7.79%, #FFCB74 8.97%, #113E21 34.09%, #113E21 46.14%, #113E21 76.23%, #113E21 89.26%), radial-gradient(447.81% 213.57% at -14.17% -56.9%, #113E21 22%, #FFCB74 81.57%);
+    background-color: #113E21;
+    /* background: radial-gradient(57.24% 366.29% at 138.26% 7.79%, #FFCB74 8.97%, #113E21 34.09%, #113E21 46.14%, #113E21 76.23%, #113E21 89.26%), radial-gradient(447.81% 213.57% at -14.17% -56.9%, #113E21 22%, #FFCB74 81.57%); */
 }
+
+.spotlight{
+    /* background: radial-gradient(ellipse at 100% -70%, #ffcb74 -60%, #113e21 63%); */
+    background: radial-gradient(ellipse at 100% -10%, #ffcb74 -38%, #113e21 54%);
+}
+
+
+  /* background: radial-gradient(ellipse at 90% 50%, rgb(255, 203, 116) -110%, rgba(17, 62, 33, 1) 69%, rgb(17 62 33) 201%); */
+
+  /* background: radial-gradient(ellipse at 100% 51%, #ffcb74 -60%, #113e2100 69%);
+    background: radial-gradient(ellipse at 91% 40%, rgba(255, 203, 116, 1) 0%, rgba(17, 62, 33, 1) 48%, rgba(17, 62, 33, 1) 100%); */

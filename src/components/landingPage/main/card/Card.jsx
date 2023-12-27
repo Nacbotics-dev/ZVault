@@ -2,16 +2,16 @@
 
 const Card = ({title = "Title", imageSrc = "#", imageAlt = "Alt text", description = "Lorem Ipsum Dolor"}) => {
   return (
-    <article className="bg-[#111111] p-7 rounded-3xl laptop:max-w-[29.5rem]">
+    <article className="bg-[#111111] p-7 flex flex-col space-y-10 rounded-3xl w-full min-h-[16.75rem] max-h-[25.75rem] ">
         <div className="flex justify-between items-center">
-            <h3 className="text-[#FFCB74] text-mid-1Head-clamp font-bold">{title}</h3>
+            <h3 className="text-[#FFCB74] text-xl md:text-2xl font-bold">{title}</h3>
             <img 
-                className="w-20"
+                className="md:w-20 w-14"
                 src={imageSrc}
                 alt={imageAlt}
             />
         </div>
-        <p className="text-white text-btn-clamp mt-8">
+        <p className="text-white text-base font-normal md:text-xl">
             {description}
         </p>
     </article>

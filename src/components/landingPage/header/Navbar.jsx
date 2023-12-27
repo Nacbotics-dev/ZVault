@@ -1,19 +1,21 @@
 import Button from "../button/Button";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  return (
-      <nav className="flex justify-between items-center relative">
-          <a href="#" className="block w-40 relative -translate-x-9 laptop:-translate-x-11 laptop:w-52 ">
-              <img
-                src="src\images\logo.png" 
-                alt="Zvault logo" 
-              />
-          </a>
-          <div>
-              <Button />
-          </div>
-      </nav>
-  )
+    return (
+        <nav className="flex justify-between items-center relative">
+            <Link to={"/"} className="block max-w-[8rem] relative w-full">
+                <img
+                    src="src\images\logo.png" 
+                    alt="Zvault logo" 
+                    className="w-full h-full"
+                />
+            </Link>
+            <div>
+                <Button />
+            </div>
+        </nav>
+    )
 }
 
 export default NavBar;

@@ -4,7 +4,7 @@ const CardGroup = () => {
   return (
     <div className="mt-20">
         <h2 className="text-midHead-clamp text-white font-extrabold text-center mb-4">HOW IT WORKS</h2>
-        <section className="mt-8 grid grid-cols-1 gap-8 laptop:grid-cols-2 laptop:gap-x-[6.1875rem]">
+        <section className="mt-8 grid grid-cols-1 gap-8 md:gap-16 md:grid-cols-2">
             <Card
               title="Connect Wallet"
               imageSrc="src\images\wifi-front-premium.png"
