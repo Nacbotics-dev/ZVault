@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    min-height: 100dvh;
+    background: radial-gradient(57.24% 366.29% at 138.26% 7.79%, #FFCB74 8.97%, #113E21 34.09%, #113E21 46.14%, #113E21 76.23%, #113E21 89.26%), radial-gradient(447.81% 213.57% at -14.17% -56.9%, #113E21 22%, #FFCB74 81.57%);
+}

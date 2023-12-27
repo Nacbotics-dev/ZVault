@@ -1,10 +1,11 @@
-
+import LandingPage from "./components/landingPage/LandingPage";
 
 function App() {
-
     return (
-        <div></div>
+        <div>
+           <LandingPage />
+        </div>
     )
 }
 
-export default App
+export default App;
