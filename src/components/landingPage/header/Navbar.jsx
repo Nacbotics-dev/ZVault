@@ -9,7 +9,7 @@ const NavBar = () => {
                 alt="Zvault logo" 
               />
           </a>
-          <div className="">
+          <div>
               <Button />
           </div>
       </nav>
