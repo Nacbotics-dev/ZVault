@@ -4,8 +4,8 @@ const VaultDropdown = ({filterBy,setFilterBY}) => {
 
 
   return (
-    <section className="flex justify-between items-center mt-28">
-        <h3 className="text-mid-1Head-clamp text-[#111] font-semibold">Vaults</h3>
+    <section className="flex justify-between items-center mt-12">
+        <h3 className="text-[1.25rem] md:text-[1.75rem] text-[#111] font-bold">Vaults</h3>
 
 
         <select 

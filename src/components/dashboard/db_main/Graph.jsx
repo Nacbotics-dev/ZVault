@@ -67,9 +67,6 @@ const Graph = () => {
                     <h2 className="text-xs md:text-2xl text-center text-black font-semibold absolute">Assets Locked</h2>
                 </div>}
 
-                
-
-
                 <div className="flex gap-2 mt-8 md:mt-0 flex-1 place-content-end">
                     <button onClick={()=>{setShowPopUp({show:true,type:"create"})}} className="bg-[#113E21] text-white font-semibold max-w-[15rem] w-full h-11 md:h-14 px-[1.3rem] md:px-12 rounded-2xl text-sm md:text-lg">
                         Create Vault
