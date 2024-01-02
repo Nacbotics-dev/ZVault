@@ -1,0 +1,270 @@
+{
+    "hints": {
+        "create_savings_plan(string,string,address,uint64,uint64,bool,axfer)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "my_savings_plan_info(string)(string,address,bool,bool,uint64,uint64,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "SavingsInfo",
+                    "elements": [
+                        [
+                            "vault_name",
+                            "string"
+                        ],
+                        [
+                            "user",
+                            "address"
+                        ],
+                        [
+                            "claimed",
+                            "bool"
+                        ],
+                        [
+                            "flexible",
+                            "bool"
+                        ],
+                        [
+                            "amount",
+                            "uint64"
+                        ],
+                        [
+                            "asset_id",
+                            "uint64"
+                        ],
+                        [
+                            "duration",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "top_up_savings(string,axfer)(string,address,bool,bool,uint64,uint64,uint64)": {
+            "structs": {
+                "output": {
+                    "name": "SavingsInfo",
+                    "elements": [
+                        [
+                            "vault_name",
+                            "string"
+                        ],
+                        [
+                            "user",
+                            "address"
+                        ],
+                        [
+                            "claimed",
+                            "bool"
+                        ],
+                        [
+                            "flexible",
+                            "bool"
+                        ],
+                        [
+                            "amount",
+                            "uint64"
+                        ],
+                        [
+                            "asset_id",
+                            "uint64"
+                        ],
+                        [
+                            "duration",
+                            "uint64"
+                        ]
+                    ]
+                }
+            },
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "withdraw_savings(string,uint64)bool": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "withdraw_fees(address,uint64)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "delete_vault(string)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        },
+        "optin_asset(asset)void": {
+            "call_config": {
+                "no_op": "CALL"
+            }
+        }
+    },
+    "source": {
+        "approval": "I3ByYWdtYSB2ZXJzaW9uIDgKaW50Y2Jsb2NrIDAgMSA0IDMyIDI3MwpieXRlY2Jsb2NrIDB4IDB4MDAgMHgxNTFmN2M3NQp0eG4gTnVtQXBwQXJncwppbnRjXzAgLy8gMAo9PQpibnogbWFpbl9sMTYKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMApwdXNoYnl0ZXMgMHg3N2NiMzU0OCAvLyAiY3JlYXRlX3NhdmluZ3NfcGxhbihzdHJpbmcsc3RyaW5nLGFkZHJlc3MsdWludDY0LHVpbnQ2NCxib29sLGF4ZmVyKXZvaWQiCj09CmJueiBtYWluX2wxNQp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDg1NTJhODAzIC8vICJteV9zYXZpbmdzX3BsYW5faW5mbyhzdHJpbmcpKHN0cmluZyxhZGRyZXNzLGJvb2wsYm9vbCx1aW50NjQsdWludDY0LHVpbnQ2NCkiCj09CmJueiBtYWluX2wxNAp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweGU3YmVkZTFjIC8vICJ0b3BfdXBfc2F2aW5ncyhzdHJpbmcsYXhmZXIpKHN0cmluZyxhZGRyZXNzLGJvb2wsYm9vbCx1aW50NjQsdWludDY0LHVpbnQ2NCkiCj09CmJueiBtYWluX2wxMwp0eG5hIEFwcGxpY2F0aW9uQXJncyAwCnB1c2hieXRlcyAweDRkYzU1YmNhIC8vICJ3aXRoZHJhd19zYXZpbmdzKHN0cmluZyx1aW50NjQpYm9vbCIKPT0KYm56IG1haW5fbDEyCnR4bmEgQXBwbGljYXRpb25BcmdzIDAKcHVzaGJ5dGVzIDB4YTM3OWM3MWEgLy8gIndpdGhkcmF3X2ZlZXMoYWRkcmVzcyx1aW50NjQpdm9pZCIKPT0KYm56IG1haW5fbDExCnR4bmEgQXBwbGljYXRpb25BcmdzIDAKcHVzaGJ5dGVzIDB4NjYwNmM3YzUgLy8gImRlbGV0ZV92YXVsdChzdHJpbmcpdm9pZCIKPT0KYm56IG1haW5fbDEwCnR4bmEgQXBwbGljYXRpb25BcmdzIDAKcHVzaGJ5dGVzIDB4ZTAwYjc4YTkgLy8gIm9wdGluX2Fzc2V0KGFzc2V0KXZvaWQiCj09CmJueiBtYWluX2w5CmVycgptYWluX2w5Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIG9wdGluYXNzZXRjYXN0ZXJfMTcKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDEwOgp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIGRlbGV0ZXZhdWx0Y2FzdGVyXzE2CmludGNfMSAvLyAxCnJldHVybgptYWluX2wxMToKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiB3aXRoZHJhd2ZlZXNjYXN0ZXJfMTUKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDEyOgp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CnR4biBBcHBsaWNhdGlvbklECmludGNfMCAvLyAwCiE9CiYmCmFzc2VydApjYWxsc3ViIHdpdGhkcmF3c2F2aW5nc2Nhc3Rlcl8xNAppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sMTM6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgdG9wdXBzYXZpbmdzY2FzdGVyXzEzCmludGNfMSAvLyAxCnJldHVybgptYWluX2wxNDoKdHhuIE9uQ29tcGxldGlvbgppbnRjXzAgLy8gTm9PcAo9PQp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQomJgphc3NlcnQKY2FsbHN1YiBteXNhdmluZ3NwbGFuaW5mb2Nhc3Rlcl8xMgppbnRjXzEgLy8gMQpyZXR1cm4KbWFpbl9sMTU6CnR4biBPbkNvbXBsZXRpb24KaW50Y18wIC8vIE5vT3AKPT0KdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKIT0KJiYKYXNzZXJ0CmNhbGxzdWIgY3JlYXRlc2F2aW5nc3BsYW5jYXN0ZXJfMTEKaW50Y18xIC8vIDEKcmV0dXJuCm1haW5fbDE2Ogp0eG4gT25Db21wbGV0aW9uCmludGNfMCAvLyBOb09wCj09CmJueiBtYWluX2wyMAp0eG4gT25Db21wbGV0aW9uCmludGNfMSAvLyBPcHRJbgo9PQpibnogbWFpbl9sMTkKZXJyCm1haW5fbDE5Ogp0eG4gQXBwbGljYXRpb25JRAppbnRjXzAgLy8gMAohPQphc3NlcnQKY2FsbHN1YiBvcHRpbl8zCmludGNfMSAvLyAxCnJldHVybgptYWluX2wyMDoKdHhuIEFwcGxpY2F0aW9uSUQKaW50Y18wIC8vIDAKPT0KYXNzZXJ0CmludGNfMSAvLyAxCnJldHVybgoKLy8gb3B0X2luX2Fzc2V0Cm9wdGluYXNzZXRfMDoKcHJvdG8gMSAwCml0eG5fYmVnaW4KaW50Y18yIC8vIGF4ZmVyCml0eG5fZmllbGQgVHlwZUVudW0KZnJhbWVfZGlnIC0xCml0eG5fZmllbGQgWGZlckFzc2V0Cmdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCml0eG5fZmllbGQgQXNzZXRSZWNlaXZlcgppbnRjXzAgLy8gMAppdHhuX2ZpZWxkIEFzc2V0QW1vdW50Cml0eG5fc3VibWl0CnJldHN1YgoKLy8gaW5uZXJfYXNzZXRfdHJhbnNmZXIKaW5uZXJhc3NldHRyYW5zZmVyXzE6CnByb3RvIDQgMAppdHhuX2JlZ2luCnB1c2hieXRlcyAweDVhNTY0MTU1NGM1NDIwNTM0MTU2NDk0ZTQ3NTMyMDNhMmQyOSAvLyAiWlZBVUxUIFNBVklOR1MgOi0pIgppdHhuX2ZpZWxkIE5vdGUKaW50Y18yIC8vIGF4ZmVyCml0eG5fZmllbGQgVHlwZUVudW0KZnJhbWVfZGlnIC00Cml0eG5fZmllbGQgWGZlckFzc2V0CmZyYW1lX2RpZyAtMgppdHhuX2ZpZWxkIFNlbmRlcgpmcmFtZV9kaWcgLTMKaXR4bl9maWVsZCBBc3NldEFtb3VudApmcmFtZV9kaWcgLTEKaXR4bl9maWVsZCBBc3NldFJlY2VpdmVyCml0eG5fc3VibWl0CnJldHN1YgoKLy8gaW5uZXJfYWxnb190cmFuc2Zlcgppbm5lcmFsZ290cmFuc2Zlcl8yOgpwcm90byAyIDAKaXR4bl9iZWdpbgppbnRjXzEgLy8gcGF5Cml0eG5fZmllbGQgVHlwZUVudW0KZnJhbWVfZGlnIC0yCml0eG5fZmllbGQgUmVjZWl2ZXIKZnJhbWVfZGlnIC0xCml0eG5fZmllbGQgQW1vdW50Cml0eG5fc3VibWl0CnJldHN1YgoKLy8gb3B0X2luCm9wdGluXzM6CnByb3RvIDAgMApyZXRzdWIKCi8vIGNyZWF0ZV9zYXZpbmdzX3BsYW4KY3JlYXRlc2F2aW5nc3BsYW5fNDoKcHJvdG8gNyAwCmludGNfMCAvLyAwCmR1cApieXRlY18wIC8vICIiCmludGNfMCAvLyAwCmR1cApieXRlY18wIC8vICIiCmR1cApmcmFtZV9kaWcgLTEKZ3R4bnMgU2VuZGVyCnR4biBTZW5kZXIKPT0KLy8gVGhlIHRva2VuIHNlbmRlciBkb2VzIG5vdCBtYXRjaCB0aGUgc2F2ZXIncyBhZGRyZXNzCmFzc2VydApmcmFtZV9kaWcgLTEKZ3R4bnMgQXNzZXRSZWNlaXZlcgpnbG9iYWwgQ3VycmVudEFwcGxpY2F0aW9uQWRkcmVzcwo9PQovLyBUaGUgYWRkcmVzcyB0aGUgdG9rZW4gd2FzIHNlbnQgaXMgbm90IHRoZSBjb250cmFjdCBhZGRyZXNzCmFzc2VydApmcmFtZV9kaWcgLTEKZ3R4bnMgQXNzZXRBbW91bnQKZnJhbWVfYnVyeSAwCmZyYW1lX2RpZyAtNgpmcmFtZV9idXJ5IDYKZnJhbWVfZGlnIDYKZnJhbWVfYnVyeSA1CnB1c2hpbnQgNTkgLy8gNTkKZnJhbWVfYnVyeSAzCmZyYW1lX2RpZyAzCml0b2IKZXh0cmFjdCA2IDAKZnJhbWVfZGlnIC01CmNvbmNhdApieXRlY18xIC8vIDB4MDAKaW50Y18wIC8vIDAKZnJhbWVfZGlnIDEKc2V0Yml0CmludGNfMSAvLyAxCmZyYW1lX2RpZyAtMgpzZXRiaXQKY29uY2F0CmZyYW1lX2RpZyAwCml0b2IKY29uY2F0CmZyYW1lX2RpZyAtNAppdG9iCmNvbmNhdApmcmFtZV9kaWcgLTMKaXRvYgpjb25jYXQKZnJhbWVfZGlnIDUKY29uY2F0CmZyYW1lX2J1cnkgMgpmcmFtZV9kaWcgLTcKZXh0cmFjdCAyIDAKYm94X2RlbApwb3AKZnJhbWVfZGlnIC03CmV4dHJhY3QgMiAwCmZyYW1lX2RpZyAyCmJveF9wdXQKcmV0c3ViCgovLyBteV9zYXZpbmdzX3BsYW5faW5mbwpteXNhdmluZ3NwbGFuaW5mb181Ogpwcm90byAxIDEKYnl0ZWNfMCAvLyAiIgpmcmFtZV9kaWcgLTEKZXh0cmFjdCAyIDAKYm94X2dldApzdG9yZSAxCnN0b3JlIDAKbG9hZCAxCmFzc2VydApsb2FkIDAKZnJhbWVfYnVyeSAwCnJldHN1YgoKLy8gdG9wX3VwX3NhdmluZ3MKdG9wdXBzYXZpbmdzXzY6CnByb3RvIDIgMQpieXRlY18wIC8vICIiCmludGNfMCAvLyAwCmJ5dGVjXzAgLy8gIiIKZHVwbiA0CmludGNfMCAvLyAwCmR1cG4gNgpieXRlY18wIC8vICIiCmR1cApmcmFtZV9kaWcgLTIKZXh0cmFjdCAyIDAKYm94X2dldApzdG9yZSAzCnN0b3JlIDIKbG9hZCAzCmFzc2VydApsb2FkIDIKZnJhbWVfYnVyeSAyCmZyYW1lX2RpZyAyCmZyYW1lX2RpZyAyCmludGNfMCAvLyAwCmV4dHJhY3RfdWludDE2CmRpZyAxCmxlbgpzdWJzdHJpbmczCmZyYW1lX2J1cnkgNApmcmFtZV9kaWcgMgpleHRyYWN0IDIgMzIKZnJhbWVfYnVyeSA1CnR4biBTZW5kZXIKZnJhbWVfYnVyeSA2CmZyYW1lX2RpZyA2CmxlbgppbnRjXzMgLy8gMzIKPT0KYXNzZXJ0CmZyYW1lX2RpZyAyCnB1c2hpbnQgMjcyIC8vIDI3MgpnZXRiaXQKZnJhbWVfYnVyeSA3CmZyYW1lX2RpZyAyCmludGMgNCAvLyAyNzMKZ2V0Yml0CmZyYW1lX2J1cnkgOApmcmFtZV9kaWcgMgpwdXNoaW50IDQzIC8vIDQzCmV4dHJhY3RfdWludDY0CmZyYW1lX2J1cnkgOQpmcmFtZV9kaWcgMgpwdXNoaW50IDUxIC8vIDUxCmV4dHJhY3RfdWludDY0CmZyYW1lX2J1cnkgMTAKZnJhbWVfZGlnIDIKcHVzaGludCAzNSAvLyAzNQpleHRyYWN0X3VpbnQ2NApmcmFtZV9idXJ5IDExCmZyYW1lX2RpZyAxMQpmcmFtZV9kaWcgLTEKZ3R4bnMgQXNzZXRBbW91bnQKKwpmcmFtZV9idXJ5IDEKZnJhbWVfZGlnIDYKZnJhbWVfZGlnIDUKPT0KLy8gVGhlIGFkZHJlc3MgZG9lcyBub3QgbWF0Y2ggdGhlIHNhdmluZ3MgY3JlYXRvcgphc3NlcnQKZnJhbWVfZGlnIC0xCmd0eG5zIFNlbmRlcgp0eG4gU2VuZGVyCj09Ci8vIFRoZSB0b2tlbiBzZW5kZXIgZG9lcyBub3QgbWF0Y2ggdGhlIHNhdmVyJ3MgYWRkcmVzcwphc3NlcnQKZnJhbWVfZGlnIC0xCmd0eG5zIEFzc2V0UmVjZWl2ZXIKZ2xvYmFsIEN1cnJlbnRBcHBsaWNhdGlvbkFkZHJlc3MKPT0KLy8gVGhlIGFkZHJlc3MgdGhlIHRva2VuIHdhcyBzZW50IGlzIG5vdCB0aGUgY29udHJhY3QgYWRkcmVzcwphc3NlcnQKZnJhbWVfZGlnIDQKZnJhbWVfYnVyeSAxNQpmcmFtZV9kaWcgMTUKZnJhbWVfYnVyeSAxNApwdXNoaW50IDU5IC8vIDU5CmZyYW1lX2J1cnkgMTIKZnJhbWVfZGlnIDEyCml0b2IKZXh0cmFjdCA2IDAKZnJhbWVfZGlnIDYKY29uY2F0CmJ5dGVjXzEgLy8gMHgwMAppbnRjXzAgLy8gMApmcmFtZV9kaWcgNwpzZXRiaXQKaW50Y18xIC8vIDEKZnJhbWVfZGlnIDgKc2V0Yml0CmNvbmNhdApmcmFtZV9kaWcgMQppdG9iCmNvbmNhdApmcmFtZV9kaWcgOQppdG9iCmNvbmNhdApmcmFtZV9kaWcgMTAKaXRvYgpjb25jYXQKZnJhbWVfZGlnIDE0CmNvbmNhdApmcmFtZV9idXJ5IDMKZnJhbWVfZGlnIC0yCmV4dHJhY3QgMiAwCmJveF9kZWwKcG9wCmZyYW1lX2RpZyAtMgpleHRyYWN0IDIgMApmcmFtZV9kaWcgMwpib3hfcHV0CmZyYW1lX2RpZyAtMgpleHRyYWN0IDIgMApib3hfZ2V0CnN0b3JlIDUKc3RvcmUgNApsb2FkIDUKYXNzZXJ0CmxvYWQgNApmcmFtZV9idXJ5IDAKcmV0c3ViCgovLyB3aXRoZHJhd19zYXZpbmdzCndpdGhkcmF3c2F2aW5nc183Ogpwcm90byAyIDEKaW50Y18wIC8vIDAKZHVwbiAyCmJ5dGVjXzAgLy8gIiIKZHVwbiA0CmludGNfMCAvLyAwCmR1cG4gMwpieXRlY18wIC8vICIiCmludGNfMCAvLyAwCmR1cApieXRlY18wIC8vICIiCmR1cApmcmFtZV9kaWcgLTIKZXh0cmFjdCAyIDAKYm94X2dldApzdG9yZSA3CnN0b3JlIDYKbG9hZCA3CmFzc2VydApsb2FkIDYKZnJhbWVfYnVyeSAzCmZyYW1lX2RpZyAzCmZyYW1lX2RpZyAzCmludGNfMCAvLyAwCmV4dHJhY3RfdWludDE2CmRpZyAxCmxlbgpzdWJzdHJpbmczCmZyYW1lX2J1cnkgNQpmcmFtZV9kaWcgMwpleHRyYWN0IDIgMzIKZnJhbWVfYnVyeSA2CnR4biBTZW5kZXIKZnJhbWVfYnVyeSA3CmZyYW1lX2RpZyA3CmxlbgppbnRjXzMgLy8gMzIKPT0KYXNzZXJ0CmZyYW1lX2RpZyAzCmludGMgNCAvLyAyNzMKZ2V0Yml0CmZyYW1lX2J1cnkgOApmcmFtZV9kaWcgMwpwdXNoaW50IDQzIC8vIDQzCmV4dHJhY3RfdWludDY0CmZyYW1lX2J1cnkgOQpmcmFtZV9kaWcgMwpwdXNoaW50IDUxIC8vIDUxCmV4dHJhY3RfdWludDY0CmZyYW1lX2J1cnkgMTAKZnJhbWVfZGlnIDMKcHVzaGludCAzNSAvLyAzNQpleHRyYWN0X3VpbnQ2NApmcmFtZV9idXJ5IDExCmdsb2JhbCBDdXJyZW50QXBwbGljYXRpb25BZGRyZXNzCmZyYW1lX2J1cnkgMTIKZnJhbWVfZGlnIDEyCmxlbgppbnRjXzMgLy8gMzIKPT0KYXNzZXJ0CmZyYW1lX2RpZyA3CmZyYW1lX2RpZyA2Cj09Ci8vIFRoZSBhZGRyZXNzIGRvZXMgbm90IG1hdGNoIHRoZSBzYXZpbmdzIGNyZWF0b3IKYXNzZXJ0CmZyYW1lX2RpZyAxMQppbnRjXzAgLy8gMAo+Ci8vIFRoZSB2YXVsdCBpcyBjb21wbGV0ZWx5IGVtcHR5CmFzc2VydApmcmFtZV9kaWcgLTEKZnJhbWVfZGlnIDExCjw9Ci8vIFRoZSBpbnN1ZmZpY2llbnQgZnVuZHMKYXNzZXJ0Cmdsb2JhbCBMYXRlc3RUaW1lc3RhbXAKZnJhbWVfZGlnIDEwCj49Ci8vIFRoZSBkdXJhdGlvbiBvZiB0aGUgbG9jayBvbiB0aGUgdmF1bHQgaGFzbid0IGVsYXNwZWQKYXNzZXJ0CmludGNfMSAvLyAxCiEKIQpmcmFtZV9idXJ5IDEKZnJhbWVfZGlnIDExCmZyYW1lX2RpZyAtMQotCmZyYW1lX2J1cnkgMgpmcmFtZV9kaWcgOQpmcmFtZV9kaWcgLTEKZnJhbWVfZGlnIDEyCmZyYW1lX2RpZyA3CmNhbGxzdWIgaW5uZXJhc3NldHRyYW5zZmVyXzEKZnJhbWVfZGlnIDUKZnJhbWVfYnVyeSAxNgpmcmFtZV9kaWcgMTYKZnJhbWVfYnVyeSAxNQpwdXNoaW50IDU5IC8vIDU5CmZyYW1lX2J1cnkgMTMKZnJhbWVfZGlnIDEzCml0b2IKZXh0cmFjdCA2IDAKZnJhbWVfZGlnIDcKY29uY2F0CmJ5dGVjXzEgLy8gMHgwMAppbnRjXzAgLy8gMApmcmFtZV9kaWcgMQpzZXRiaXQKaW50Y18xIC8vIDEKZnJhbWVfZGlnIDgKc2V0Yml0CmNvbmNhdApmcmFtZV9kaWcgMgppdG9iCmNvbmNhdApmcmFtZV9kaWcgOQppdG9iCmNvbmNhdApmcmFtZV9kaWcgMTAKaXRvYgpjb25jYXQKZnJhbWVfZGlnIDE1CmNvbmNhdApmcmFtZV9idXJ5IDQKZnJhbWVfZGlnIC0yCmV4dHJhY3QgMiAwCmJveF9kZWwKcG9wCmZyYW1lX2RpZyAtMgpleHRyYWN0IDIgMApmcmFtZV9kaWcgNApib3hfcHV0CmZyYW1lX2RpZyAxCmZyYW1lX2J1cnkgMApyZXRzdWIKCi8vIHdpdGhkcmF3X2ZlZXMKd2l0aGRyYXdmZWVzXzg6CnByb3RvIDIgMAp0eG4gU2VuZGVyCmdsb2JhbCBDcmVhdG9yQWRkcmVzcwo9PQphc3NlcnQKZnJhbWVfZGlnIC0yCmZyYW1lX2RpZyAtMQpjYWxsc3ViIGlubmVyYWxnb3RyYW5zZmVyXzIKcmV0c3ViCgovLyBkZWxldGVfdmF1bHQKZGVsZXRldmF1bHRfOToKcHJvdG8gMSAwCmJ5dGVjXzAgLy8gIiIKZHVwbiAyCmZyYW1lX2RpZyAtMQpleHRyYWN0IDIgMApib3hfZ2V0CnN0b3JlIDkKc3RvcmUgOApsb2FkIDkKYXNzZXJ0CmxvYWQgOApmcmFtZV9idXJ5IDAKZnJhbWVfZGlnIDAKZXh0cmFjdCAyIDMyCmZyYW1lX2J1cnkgMQp0eG4gU2VuZGVyCmZyYW1lX2J1cnkgMgpmcmFtZV9kaWcgMgpsZW4KaW50Y18zIC8vIDMyCj09CmFzc2VydApmcmFtZV9kaWcgMgpmcmFtZV9kaWcgMQo9PQovLyBUaGUgYWRkcmVzcyBkb2VzIG5vdCBtYXRjaCB0aGUgc2F2aW5ncyBjcmVhdG9yCmFzc2VydApmcmFtZV9kaWcgLTEKZXh0cmFjdCAyIDAKYm94X2RlbApwb3AKcmV0c3ViCgovLyBvcHRpbl9hc3NldApvcHRpbmFzc2V0XzEwOgpwcm90byAxIDAKaW50Y18wIC8vIDAKZnJhbWVfZGlnIC0xCnR4bmFzIEFzc2V0cwpmcmFtZV9idXJ5IDAKZnJhbWVfZGlnIDAKY2FsbHN1YiBvcHRpbmFzc2V0XzAKcmV0c3ViCgovLyBjcmVhdGVfc2F2aW5nc19wbGFuX2Nhc3RlcgpjcmVhdGVzYXZpbmdzcGxhbmNhc3Rlcl8xMToKcHJvdG8gMCAwCmJ5dGVjXzAgLy8gIiIKZHVwbiAyCmludGNfMCAvLyAwCmR1cG4gMwp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmZyYW1lX2J1cnkgMAp0eG5hIEFwcGxpY2F0aW9uQXJncyAyCmZyYW1lX2J1cnkgMQp0eG5hIEFwcGxpY2F0aW9uQXJncyAzCmZyYW1lX2J1cnkgMgp0eG5hIEFwcGxpY2F0aW9uQXJncyA0CmJ0b2kKZnJhbWVfYnVyeSAzCnR4bmEgQXBwbGljYXRpb25BcmdzIDUKYnRvaQpmcmFtZV9idXJ5IDQKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgNgppbnRjXzAgLy8gMApwdXNoaW50IDggLy8gOAoqCmdldGJpdApmcmFtZV9idXJ5IDUKdHhuIEdyb3VwSW5kZXgKaW50Y18xIC8vIDEKLQpmcmFtZV9idXJ5IDYKZnJhbWVfZGlnIDYKZ3R4bnMgVHlwZUVudW0KaW50Y18yIC8vIGF4ZmVyCj09CmFzc2VydApmcmFtZV9kaWcgMApmcmFtZV9kaWcgMQpmcmFtZV9kaWcgMgpmcmFtZV9kaWcgMwpmcmFtZV9kaWcgNApmcmFtZV9kaWcgNQpmcmFtZV9kaWcgNgpjYWxsc3ViIGNyZWF0ZXNhdmluZ3NwbGFuXzQKcmV0c3ViCgovLyBteV9zYXZpbmdzX3BsYW5faW5mb19jYXN0ZXIKbXlzYXZpbmdzcGxhbmluZm9jYXN0ZXJfMTI6CnByb3RvIDAgMApieXRlY18wIC8vICIiCmR1cAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmZyYW1lX2J1cnkgMQpmcmFtZV9kaWcgMQpjYWxsc3ViIG15c2F2aW5nc3BsYW5pbmZvXzUKZnJhbWVfYnVyeSAwCmJ5dGVjXzIgLy8gMHgxNTFmN2M3NQpmcmFtZV9kaWcgMApjb25jYXQKbG9nCnJldHN1YgoKLy8gdG9wX3VwX3NhdmluZ3NfY2FzdGVyCnRvcHVwc2F2aW5nc2Nhc3Rlcl8xMzoKcHJvdG8gMCAwCmJ5dGVjXzAgLy8gIiIKZHVwCmludGNfMCAvLyAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKZnJhbWVfYnVyeSAxCnR4biBHcm91cEluZGV4CmludGNfMSAvLyAxCi0KZnJhbWVfYnVyeSAyCmZyYW1lX2RpZyAyCmd0eG5zIFR5cGVFbnVtCmludGNfMiAvLyBheGZlcgo9PQphc3NlcnQKZnJhbWVfZGlnIDEKZnJhbWVfZGlnIDIKY2FsbHN1YiB0b3B1cHNhdmluZ3NfNgpmcmFtZV9idXJ5IDAKYnl0ZWNfMiAvLyAweDE1MWY3Yzc1CmZyYW1lX2RpZyAwCmNvbmNhdApsb2cKcmV0c3ViCgovLyB3aXRoZHJhd19zYXZpbmdzX2Nhc3Rlcgp3aXRoZHJhd3NhdmluZ3NjYXN0ZXJfMTQ6CnByb3RvIDAgMAppbnRjXzAgLy8gMApieXRlY18wIC8vICIiCmludGNfMCAvLyAwCnR4bmEgQXBwbGljYXRpb25BcmdzIDEKZnJhbWVfYnVyeSAxCnR4bmEgQXBwbGljYXRpb25BcmdzIDIKYnRvaQpmcmFtZV9idXJ5IDIKZnJhbWVfZGlnIDEKZnJhbWVfZGlnIDIKY2FsbHN1YiB3aXRoZHJhd3NhdmluZ3NfNwpmcmFtZV9idXJ5IDAKYnl0ZWNfMiAvLyAweDE1MWY3Yzc1CmJ5dGVjXzEgLy8gMHgwMAppbnRjXzAgLy8gMApmcmFtZV9kaWcgMApzZXRiaXQKY29uY2F0CmxvZwpyZXRzdWIKCi8vIHdpdGhkcmF3X2ZlZXNfY2FzdGVyCndpdGhkcmF3ZmVlc2Nhc3Rlcl8xNToKcHJvdG8gMCAwCmJ5dGVjXzAgLy8gIiIKaW50Y18wIC8vIDAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpmcmFtZV9idXJ5IDAKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgpidG9pCmZyYW1lX2J1cnkgMQpmcmFtZV9kaWcgMApmcmFtZV9kaWcgMQpjYWxsc3ViIHdpdGhkcmF3ZmVlc184CnJldHN1YgoKLy8gZGVsZXRlX3ZhdWx0X2Nhc3RlcgpkZWxldGV2YXVsdGNhc3Rlcl8xNjoKcHJvdG8gMCAwCmJ5dGVjXzAgLy8gIiIKdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQpmcmFtZV9idXJ5IDAKZnJhbWVfZGlnIDAKY2FsbHN1YiBkZWxldGV2YXVsdF85CnJldHN1YgoKLy8gb3B0aW5fYXNzZXRfY2FzdGVyCm9wdGluYXNzZXRjYXN0ZXJfMTc6CnByb3RvIDAgMAppbnRjXzAgLy8gMAp0eG5hIEFwcGxpY2F0aW9uQXJncyAxCmludGNfMCAvLyAwCmdldGJ5dGUKZnJhbWVfYnVyeSAwCmZyYW1lX2RpZyAwCmNhbGxzdWIgb3B0aW5hc3NldF8xMApyZXRzdWI=",
+        "clear": "I3ByYWdtYSB2ZXJzaW9uIDgKcHVzaGludCAwIC8vIDAKcmV0dXJu"
+    },
+    "state": {
+        "global": {
+            "num_byte_slices": 0,
+            "num_uints": 0
+        },
+        "local": {
+            "num_byte_slices": 0,
+            "num_uints": 0
+        }
+    },
+    "schema": {
+        "global": {
+            "declared": {},
+            "reserved": {}
+        },
+        "local": {
+            "declared": {},
+            "reserved": {}
+        }
+    },
+    "contract": {
+        "name": "ZVault",
+        "methods": [
+            {
+                "name": "create_savings_plan",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "vault_id"
+                    },
+                    {
+                        "type": "string",
+                        "name": "vault_name"
+                    },
+                    {
+                        "type": "address",
+                        "name": "vault_keeper"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "asset_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "duration"
+                    },
+                    {
+                        "type": "bool",
+                        "name": "flexible"
+                    },
+                    {
+                        "type": "axfer",
+                        "name": "asset_xfer"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                },
+                "desc": "This method is used to create a new savings plan"
+            },
+            {
+                "name": "my_savings_plan_info",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "vault_id"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,address,bool,bool,uint64,uint64,uint64)"
+                },
+                "desc": "This method is used to retreive a savings plans details"
+            },
+            {
+                "name": "top_up_savings",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "vault_id"
+                    },
+                    {
+                        "type": "axfer",
+                        "name": "asset_xfer"
+                    }
+                ],
+                "returns": {
+                    "type": "(string,address,bool,bool,uint64,uint64,uint64)"
+                },
+                "desc": "This is used to increase the amount of token that has already been locked/saved"
+            },
+            {
+                "name": "withdraw_savings",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "vault_id"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "amount"
+                    }
+                ],
+                "returns": {
+                    "type": "bool"
+                },
+                "desc": "This method is used to withdraw all or a particular amount from the savings provided it's the due date"
+            },
+            {
+                "name": "withdraw_fees",
+                "args": [
+                    {
+                        "type": "address",
+                        "name": "to_address"
+                    },
+                    {
+                        "type": "uint64",
+                        "name": "amount"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                },
+                "desc": "This method is used to withdraw the algorand fees sent when creating a vault.\nOnly the contract creator can withdraw on the fees.\nNOTE: you ccan only withdraw the fees and nothing else."
+            },
+            {
+                "name": "delete_vault",
+                "args": [
+                    {
+                        "type": "string",
+                        "name": "vault_id"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                },
+                "desc": "This method is used to delete a vault from the contract.\nNOTE : Make sure you have withdrawn all your locked assets. Only the vault creator can delete it."
+            },
+            {
+                "name": "optin_asset",
+                "args": [
+                    {
+                        "type": "asset",
+                        "name": "asset_id"
+                    }
+                ],
+                "returns": {
+                    "type": "void"
+                },
+                "desc": "This method is used to add a new asset to the ZVault contract"
+            }
+        ],
+        "networks": {}
+    },
+    "bare_call_config": {
+        "no_op": "CREATE",
+        "opt_in": "CALL"
+    }
+}

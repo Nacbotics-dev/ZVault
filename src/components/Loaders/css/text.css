@@ -1,0 +1,27 @@
+.loader {
+    display: inline-block;
+    position: relative;
+  }
+  .loader::after {
+    content: '';  
+    width: 5px;
+    height: 5px;
+    background: currentColor;
+    position: absolute;
+    right: -.5rem;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite;
+    border-radius: 50%;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+      box-shadow: 10px 0 #113E21, 20px 0 rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 10px 0 #113E21, 20px 0 #113E21;
+    }
+  }

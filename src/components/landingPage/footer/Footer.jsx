@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="flex justify-between items-end flex-col md:flex-row">
             <div className="flex flex-col w-full">
                 <div>
-                    <Link to={"/"} className="block max-w-[8rem] relative w-full">
+                    <Link to={"/"} className="block max-w-[6rem] md:max-w-[8rem] relative w-full">
                         <img
                             src="src\images\logo.png" 
                             alt="Zvault logo" 

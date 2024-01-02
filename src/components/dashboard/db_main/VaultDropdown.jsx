@@ -1,7 +1,6 @@
-import { useState } from "react";
 
-const VaultDropdown = () => {
-  const [filterBy,setFilterBY] = useState("All")
+const VaultDropdown = ({filterBy,setFilterBY}) => {
+  
 
 
   return (
@@ -14,7 +13,7 @@ const VaultDropdown = () => {
           id="filter_by" 
           value={filterBy} 
           onChange={(e)=>{setFilterBY(e.target.value)}}
-          className=" rounded-2xl max-w-[16rem] w-full border-2 border-[#111] h-11 md:h-14 cursor-pointer px-4 text-sm font-semibold md:text-lg"
+          className="rounded-2xl max-w-[8rem] md:max-w-[16rem] w-full border-2 border-[#111] h-11 md:h-14 cursor-pointer px-4 text-sm font-semibold md:text-lg"
           >
             <option value="All">All</option>
             <option value="Me">Only My Own</option>

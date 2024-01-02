@@ -1,0 +1,754 @@
+#pragma version 8
+intcblock 0 1 4 32 273
+bytecblock 0x 0x00 0x151f7c75
+txn NumAppArgs
+intc_0 // 0
+==
+bnz main_l16
+txna ApplicationArgs 0
+pushbytes 0x77cb3548 // "create_savings_plan(string,string,address,uint64,uint64,bool,axfer)void"
+==
+bnz main_l15
+txna ApplicationArgs 0
+pushbytes 0x8552a803 // "my_savings_plan_info(string)(string,address,bool,bool,uint64,uint64,uint64)"
+==
+bnz main_l14
+txna ApplicationArgs 0
+pushbytes 0xe7bede1c // "top_up_savings(string,axfer)(string,address,bool,bool,uint64,uint64,uint64)"
+==
+bnz main_l13
+txna ApplicationArgs 0
+pushbytes 0x4dc55bca // "withdraw_savings(string,uint64)bool"
+==
+bnz main_l12
+txna ApplicationArgs 0
+pushbytes 0xa379c71a // "withdraw_fees(address,uint64)void"
+==
+bnz main_l11
+txna ApplicationArgs 0
+pushbytes 0x6606c7c5 // "delete_vault(string)void"
+==
+bnz main_l10
+txna ApplicationArgs 0
+pushbytes 0xe00b78a9 // "optin_asset(asset)void"
+==
+bnz main_l9
+err
+main_l9:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub optinassetcaster_17
+intc_1 // 1
+return
+main_l10:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub deletevaultcaster_16
+intc_1 // 1
+return
+main_l11:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub withdrawfeescaster_15
+intc_1 // 1
+return
+main_l12:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub withdrawsavingscaster_14
+intc_1 // 1
+return
+main_l13:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub topupsavingscaster_13
+intc_1 // 1
+return
+main_l14:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub mysavingsplaninfocaster_12
+intc_1 // 1
+return
+main_l15:
+txn OnCompletion
+intc_0 // NoOp
+==
+txn ApplicationID
+intc_0 // 0
+!=
+&&
+assert
+callsub createsavingsplancaster_11
+intc_1 // 1
+return
+main_l16:
+txn OnCompletion
+intc_0 // NoOp
+==
+bnz main_l20
+txn OnCompletion
+intc_1 // OptIn
+==
+bnz main_l19
+err
+main_l19:
+txn ApplicationID
+intc_0 // 0
+!=
+assert
+callsub optin_3
+intc_1 // 1
+return
+main_l20:
+txn ApplicationID
+intc_0 // 0
+==
+assert
+intc_1 // 1
+return
+
+// opt_in_asset
+optinasset_0:
+proto 1 0
+itxn_begin
+intc_2 // axfer
+itxn_field TypeEnum
+frame_dig -1
+itxn_field XferAsset
+global CurrentApplicationAddress
+itxn_field AssetReceiver
+intc_0 // 0
+itxn_field AssetAmount
+itxn_submit
+retsub
+
+// inner_asset_transfer
+innerassettransfer_1:
+proto 4 0
+itxn_begin
+pushbytes 0x5a5641554c5420534156494e4753203a2d29 // "ZVAULT SAVINGS :-)"
+itxn_field Note
+intc_2 // axfer
+itxn_field TypeEnum
+frame_dig -4
+itxn_field XferAsset
+frame_dig -2
+itxn_field Sender
+frame_dig -3
+itxn_field AssetAmount
+frame_dig -1
+itxn_field AssetReceiver
+itxn_submit
+retsub
+
+// inner_algo_transfer
+inneralgotransfer_2:
+proto 2 0
+itxn_begin
+intc_1 // pay
+itxn_field TypeEnum
+frame_dig -2
+itxn_field Receiver
+frame_dig -1
+itxn_field Amount
+itxn_submit
+retsub
+
+// opt_in
+optin_3:
+proto 0 0
+retsub
+
+// create_savings_plan
+createsavingsplan_4:
+proto 7 0
+intc_0 // 0
+dup
+bytec_0 // ""
+intc_0 // 0
+dup
+bytec_0 // ""
+dup
+frame_dig -1
+gtxns Sender
+txn Sender
+==
+// The token sender does not match the saver's address
+assert
+frame_dig -1
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+// The address the token was sent is not the contract address
+assert
+frame_dig -1
+gtxns AssetAmount
+frame_bury 0
+frame_dig -6
+frame_bury 6
+frame_dig 6
+frame_bury 5
+pushint 59 // 59
+frame_bury 3
+frame_dig 3
+itob
+extract 6 0
+frame_dig -5
+concat
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 1
+setbit
+intc_1 // 1
+frame_dig -2
+setbit
+concat
+frame_dig 0
+itob
+concat
+frame_dig -4
+itob
+concat
+frame_dig -3
+itob
+concat
+frame_dig 5
+concat
+frame_bury 2
+frame_dig -7
+extract 2 0
+box_del
+pop
+frame_dig -7
+extract 2 0
+frame_dig 2
+box_put
+retsub
+
+// my_savings_plan_info
+mysavingsplaninfo_5:
+proto 1 1
+bytec_0 // ""
+frame_dig -1
+extract 2 0
+box_get
+store 1
+store 0
+load 1
+assert
+load 0
+frame_bury 0
+retsub
+
+// top_up_savings
+topupsavings_6:
+proto 2 1
+bytec_0 // ""
+intc_0 // 0
+bytec_0 // ""
+dupn 4
+intc_0 // 0
+dupn 6
+bytec_0 // ""
+dup
+frame_dig -2
+extract 2 0
+box_get
+store 3
+store 2
+load 3
+assert
+load 2
+frame_bury 2
+frame_dig 2
+frame_dig 2
+intc_0 // 0
+extract_uint16
+dig 1
+len
+substring3
+frame_bury 4
+frame_dig 2
+extract 2 32
+frame_bury 5
+txn Sender
+frame_bury 6
+frame_dig 6
+len
+intc_3 // 32
+==
+assert
+frame_dig 2
+pushint 272 // 272
+getbit
+frame_bury 7
+frame_dig 2
+intc 4 // 273
+getbit
+frame_bury 8
+frame_dig 2
+pushint 43 // 43
+extract_uint64
+frame_bury 9
+frame_dig 2
+pushint 51 // 51
+extract_uint64
+frame_bury 10
+frame_dig 2
+pushint 35 // 35
+extract_uint64
+frame_bury 11
+frame_dig 11
+frame_dig -1
+gtxns AssetAmount
++
+frame_bury 1
+frame_dig 6
+frame_dig 5
+==
+// The address does not match the savings creator
+assert
+frame_dig -1
+gtxns Sender
+txn Sender
+==
+// The token sender does not match the saver's address
+assert
+frame_dig -1
+gtxns AssetReceiver
+global CurrentApplicationAddress
+==
+// The address the token was sent is not the contract address
+assert
+frame_dig 4
+frame_bury 15
+frame_dig 15
+frame_bury 14
+pushint 59 // 59
+frame_bury 12
+frame_dig 12
+itob
+extract 6 0
+frame_dig 6
+concat
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 7
+setbit
+intc_1 // 1
+frame_dig 8
+setbit
+concat
+frame_dig 1
+itob
+concat
+frame_dig 9
+itob
+concat
+frame_dig 10
+itob
+concat
+frame_dig 14
+concat
+frame_bury 3
+frame_dig -2
+extract 2 0
+box_del
+pop
+frame_dig -2
+extract 2 0
+frame_dig 3
+box_put
+frame_dig -2
+extract 2 0
+box_get
+store 5
+store 4
+load 5
+assert
+load 4
+frame_bury 0
+retsub
+
+// withdraw_savings
+withdrawsavings_7:
+proto 2 1
+intc_0 // 0
+dupn 2
+bytec_0 // ""
+dupn 4
+intc_0 // 0
+dupn 3
+bytec_0 // ""
+intc_0 // 0
+dup
+bytec_0 // ""
+dup
+frame_dig -2
+extract 2 0
+box_get
+store 7
+store 6
+load 7
+assert
+load 6
+frame_bury 3
+frame_dig 3
+frame_dig 3
+intc_0 // 0
+extract_uint16
+dig 1
+len
+substring3
+frame_bury 5
+frame_dig 3
+extract 2 32
+frame_bury 6
+txn Sender
+frame_bury 7
+frame_dig 7
+len
+intc_3 // 32
+==
+assert
+frame_dig 3
+intc 4 // 273
+getbit
+frame_bury 8
+frame_dig 3
+pushint 43 // 43
+extract_uint64
+frame_bury 9
+frame_dig 3
+pushint 51 // 51
+extract_uint64
+frame_bury 10
+frame_dig 3
+pushint 35 // 35
+extract_uint64
+frame_bury 11
+global CurrentApplicationAddress
+frame_bury 12
+frame_dig 12
+len
+intc_3 // 32
+==
+assert
+frame_dig 7
+frame_dig 6
+==
+// The address does not match the savings creator
+assert
+frame_dig 11
+intc_0 // 0
+>
+// The vault is completely empty
+assert
+frame_dig -1
+frame_dig 11
+<=
+// The insufficient funds
+assert
+global LatestTimestamp
+frame_dig 10
+>=
+// The duration of the lock on the vault hasn't elasped
+assert
+intc_1 // 1
+!
+!
+frame_bury 1
+frame_dig 11
+frame_dig -1
+-
+frame_bury 2
+frame_dig 9
+frame_dig -1
+frame_dig 12
+frame_dig 7
+callsub innerassettransfer_1
+frame_dig 5
+frame_bury 16
+frame_dig 16
+frame_bury 15
+pushint 59 // 59
+frame_bury 13
+frame_dig 13
+itob
+extract 6 0
+frame_dig 7
+concat
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 1
+setbit
+intc_1 // 1
+frame_dig 8
+setbit
+concat
+frame_dig 2
+itob
+concat
+frame_dig 9
+itob
+concat
+frame_dig 10
+itob
+concat
+frame_dig 15
+concat
+frame_bury 4
+frame_dig -2
+extract 2 0
+box_del
+pop
+frame_dig -2
+extract 2 0
+frame_dig 4
+box_put
+frame_dig 1
+frame_bury 0
+retsub
+
+// withdraw_fees
+withdrawfees_8:
+proto 2 0
+txn Sender
+global CreatorAddress
+==
+assert
+frame_dig -2
+frame_dig -1
+callsub inneralgotransfer_2
+retsub
+
+// delete_vault
+deletevault_9:
+proto 1 0
+bytec_0 // ""
+dupn 2
+frame_dig -1
+extract 2 0
+box_get
+store 9
+store 8
+load 9
+assert
+load 8
+frame_bury 0
+frame_dig 0
+extract 2 32
+frame_bury 1
+txn Sender
+frame_bury 2
+frame_dig 2
+len
+intc_3 // 32
+==
+assert
+frame_dig 2
+frame_dig 1
+==
+// The address does not match the savings creator
+assert
+frame_dig -1
+extract 2 0
+box_del
+pop
+retsub
+
+// optin_asset
+optinasset_10:
+proto 1 0
+intc_0 // 0
+frame_dig -1
+txnas Assets
+frame_bury 0
+frame_dig 0
+callsub optinasset_0
+retsub
+
+// create_savings_plan_caster
+createsavingsplancaster_11:
+proto 0 0
+bytec_0 // ""
+dupn 2
+intc_0 // 0
+dupn 3
+txna ApplicationArgs 1
+frame_bury 0
+txna ApplicationArgs 2
+frame_bury 1
+txna ApplicationArgs 3
+frame_bury 2
+txna ApplicationArgs 4
+btoi
+frame_bury 3
+txna ApplicationArgs 5
+btoi
+frame_bury 4
+txna ApplicationArgs 6
+intc_0 // 0
+pushint 8 // 8
+*
+getbit
+frame_bury 5
+txn GroupIndex
+intc_1 // 1
+-
+frame_bury 6
+frame_dig 6
+gtxns TypeEnum
+intc_2 // axfer
+==
+assert
+frame_dig 0
+frame_dig 1
+frame_dig 2
+frame_dig 3
+frame_dig 4
+frame_dig 5
+frame_dig 6
+callsub createsavingsplan_4
+retsub
+
+// my_savings_plan_info_caster
+mysavingsplaninfocaster_12:
+proto 0 0
+bytec_0 // ""
+dup
+txna ApplicationArgs 1
+frame_bury 1
+frame_dig 1
+callsub mysavingsplaninfo_5
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// top_up_savings_caster
+topupsavingscaster_13:
+proto 0 0
+bytec_0 // ""
+dup
+intc_0 // 0
+txna ApplicationArgs 1
+frame_bury 1
+txn GroupIndex
+intc_1 // 1
+-
+frame_bury 2
+frame_dig 2
+gtxns TypeEnum
+intc_2 // axfer
+==
+assert
+frame_dig 1
+frame_dig 2
+callsub topupsavings_6
+frame_bury 0
+bytec_2 // 0x151f7c75
+frame_dig 0
+concat
+log
+retsub
+
+// withdraw_savings_caster
+withdrawsavingscaster_14:
+proto 0 0
+intc_0 // 0
+bytec_0 // ""
+intc_0 // 0
+txna ApplicationArgs 1
+frame_bury 1
+txna ApplicationArgs 2
+btoi
+frame_bury 2
+frame_dig 1
+frame_dig 2
+callsub withdrawsavings_7
+frame_bury 0
+bytec_2 // 0x151f7c75
+bytec_1 // 0x00
+intc_0 // 0
+frame_dig 0
+setbit
+concat
+log
+retsub
+
+// withdraw_fees_caster
+withdrawfeescaster_15:
+proto 0 0
+bytec_0 // ""
+intc_0 // 0
+txna ApplicationArgs 1
+frame_bury 0
+txna ApplicationArgs 2
+btoi
+frame_bury 1
+frame_dig 0
+frame_dig 1
+callsub withdrawfees_8
+retsub
+
+// delete_vault_caster
+deletevaultcaster_16:
+proto 0 0
+bytec_0 // ""
+txna ApplicationArgs 1
+frame_bury 0
+frame_dig 0
+callsub deletevault_9
+retsub
+
+// optin_asset_caster
+optinassetcaster_17:
+proto 0 0
+intc_0 // 0
+txna ApplicationArgs 1
+intc_0 // 0
+getbyte
+frame_bury 0
+frame_dig 0
+callsub optinasset_10
+retsub

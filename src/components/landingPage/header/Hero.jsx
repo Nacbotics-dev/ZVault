@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
 
         {/* <div id='oval'/> */}
-        <div className='max-w-[550px] w-full max-h-[501px] h-full relative md:-right-12'>
+        <div className='max-w-[550px] w-full max-h-[501px] h-full relative lg:-right-12'>
             <img 
                 src="src\images\vault-illustration.png" 
                 alt="A vault-illustration" 

@@ -25,7 +25,34 @@
 body{
     min-height: 100dvh;
     background-color: #113E21;
-    /* background: radial-gradient(57.24% 366.29% at 138.26% 7.79%, #FFCB74 8.97%, #113E21 34.09%, #113E21 46.14%, #113E21 76.23%, #113E21 89.26%), radial-gradient(447.81% 213.57% at -14.17% -56.9%, #113E21 22%, #FFCB74 81.57%); */
+}
+
+
+.card-shadow{
+  box-shadow:
+  0px 0px 4.3px rgba(0, 0, 0, 0.031),
+  0px 0px 11.9px rgba(0, 0, 0, 0.045),
+  0px 0px 28.6px rgba(0, 0, 0, 0.059),
+  0px 0px 95px rgba(0, 0, 0, 0.09)
+}
+
+/* Remove arrows (spinners) in number input */
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* WebKit (Chrome, Safari) */
+  margin: 0; /* Removes the default margin */
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #f6f6f6 inset !important;
 }
 
 .spotlight{
@@ -34,7 +61,7 @@ body{
 }
 
 
-  /* background: radial-gradient(ellipse at 90% 50%, rgb(255, 203, 116) -110%, rgba(17, 62, 33, 1) 69%, rgb(17 62 33) 201%); */
+/* background: radial-gradient(ellipse at 90% 50%, rgb(255, 203, 116) -110%, rgba(17, 62, 33, 1) 69%, rgb(17 62 33) 201%); */
 
-  /* background: radial-gradient(ellipse at 100% 51%, #ffcb74 -60%, #113e2100 69%);
-    background: radial-gradient(ellipse at 91% 40%, rgba(255, 203, 116, 1) 0%, rgba(17, 62, 33, 1) 48%, rgba(17, 62, 33, 1) 100%); */
+/* background: radial-gradient(ellipse at 100% 51%, #ffcb74 -60%, #113e2100 69%);
+  background: radial-gradient(ellipse at 91% 40%, rgba(255, 203, 116, 1) 0%, rgba(17, 62, 33, 1) 48%, rgba(17, 62, 33, 1) 100%); */
