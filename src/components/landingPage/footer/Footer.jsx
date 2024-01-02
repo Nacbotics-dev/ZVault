@@ -8,7 +8,7 @@ const Footer = () => {
                 <div>
                     <Link to={"/"} className="block max-w-[6rem] md:max-w-[8rem] relative w-full">
                         <img
-                            src="src\images\logo.png" 
+                            src="\images\logo.png" 
                             alt="Zvault logo" 
                         />
                     </Link>
@@ -25,18 +25,18 @@ const Footer = () => {
                 <div className="max-w-[16rem] w-full">
                     <img
                         className="w-full relative" 
-                        src="src\images\algorand logo.png" 
+                        src="\images\algorand logo.png" 
                         alt="Algorand logo" 
                     />
                     <img 
                         className="w-full relative"
-                        src="src\images\nacbotics logo.png" 
+                        src="\images\nacbotics logo.png" 
                         alt="Nacbotics logo" 
                     />
                 </div>
                 <img 
                     className="w-[8rem] relative"
-                    src="src\images\code with sleek logo.png" 
+                    src="\images\code with sleek logo.png" 
                     alt="Codewithsleek logo" 
                 />
             </div>

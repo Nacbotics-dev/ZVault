@@ -13,7 +13,7 @@ const Db_Navbar = () => {
             <nav className="flex justify-between items-center">
                 <Link to={"/"} className="block max-w-[6rem] md:max-w-[8rem] relative w-full">
                     <img
-                        src="src\images\logo.png" 
+                        src="\images\logo.png" 
                         alt="Zvault logo" 
                     />
                 </Link>

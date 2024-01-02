@@ -21,7 +21,7 @@ const Db_cards = ({vaultInfo,setShowPopUp}) => {
 
   return (
         <div className="p-7 bg-white rounded-[1.25rem] card-shadow max-w-[22rem] w-full">
-            <div className="w-12 h-12 bg-[#FFCB74] rounded-[50%] ml-auto"></div>
+            <div className="w-12 h-12 bg-[#DDD] rounded-[50%] ml-auto"></div>
             <div className="my-6">
                 <h3 className="text-[#113E21] text-center text-2xl md:text-[2rem] font-bold">{vaultInfo[0]}</h3>
                 <p className="text-black text-sm md:text-lg font-medium my-2">Token:<span className="font-bold ml-1">{assetInfo?.name}</span></p>
