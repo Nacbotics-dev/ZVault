@@ -39,7 +39,7 @@ export async function decodeVaults(vault_id) {
 
 
 export async function getAssets() {
-    const zVaultAssets = []
+    var zVaultAssets = []
     const contractInfo = await algodClient.accountInformation(ZVAULT_CONTRACT_ADDRESS).do()
 
     const Assets = contractInfo.assets
@@ -56,7 +56,11 @@ export async function getAssets() {
         
     }
 
-    return(zVaultAssets)
+    zVaultAssets = zVaultAssets.sort((a, b) => b["amount"] - a["amount"]);
+
+    
+
+    return(zVaultAssets.slice(0, 5))
     
 }
 export async function getZVaults() {

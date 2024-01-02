@@ -110,6 +110,8 @@ export default function CreateVault({setShowPopUp}) {
                         {!loading.loading && "Create Vault"}
                         {loading.loading && <TextLoader text={"Creating Vault"}/>}
                     </button>}
+
+                    {!activeAddress && <p className="font-medium max-w-xs overflow-hidden text-ellipsis w-full text-center place-self-center md:text-base text-sm col-span-3 text-red-600">Please Connect your wallet</p>}
                 </div>
 
             </form>

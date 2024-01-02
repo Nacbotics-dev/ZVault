@@ -74,6 +74,8 @@ export default function TopUpVault({vaultInfo,setShowPopUp}) {
                         {!loading.loading && "Top Up"}
                         {loading.loading && <TextLoader text={"Topping Up"}/>}
                     </button>}
+
+                    {!activeAddress && <p className="font-medium max-w-xs overflow-hidden text-ellipsis w-full text-center place-self-center md:text-base text-sm col-span-3 text-red-600">Please Connect your wallet</p>}
                 </div>
 
             </form>
