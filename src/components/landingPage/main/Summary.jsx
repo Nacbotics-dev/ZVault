@@ -2,8 +2,8 @@
 const SummaryItem = ({amount = "0", title = "Title", bg = "bg-white"})=>{
     return (
         <div className={`${bg} md:max-w-[258.28px] w-full p-9 rounded-3xl flex flex-col justify-center items-center `}>
-            <h3 className="text-midHead-clamp font-black">{amount}</h3>
-            <p className="text-btn-clamp text-[#113E21] font-normal">{title}</p>
+            <h3 className="md:text-[2.75rem] text-4xl font-bold">{amount}</h3>
+            <p className="md:text-2xl text-xl text-[#113E21] font-normal">{title}</p>
         </div>
     )
 }

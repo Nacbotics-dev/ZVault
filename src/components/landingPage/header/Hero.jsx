@@ -8,7 +8,7 @@ const Hero = () => {
                 Guardian of Your
                 Digital Fortunes: ZVault
             </h1>
-            <p className='text-white text-smHead-clamp font-medium'>
+            <p className='text-white md:text-[1.75rem] text-xl font-medium'>
                 Seamless. Secure. Yours.
             </p>
             <Button /> 

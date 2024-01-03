@@ -16,9 +16,10 @@ const Footer = () => {
                         Seamless. Secure. Yours.
                     </p>
                 </div>
-                <div className="mt-5 md:mt-[3.8125rem]">
+                <div className="mt-5 md:mt-[3.8125rem] flex flex-col">
                     <Link to={"/"} className="text-[#FFCB74]  text-base md:text-lg block">Whitepaper</Link>
                     <Link to={"/"} className="text-[#FFCB74]  text-base md:text-lg">Documentation</Link>
+                    <a href="https://github.com/Nacbotics-dev/ZVault" target="_blank" rel="noreferrer" className="text-[#FFCB74]  text-base md:text-lg">GitHub</a>
                 </div>
             </div>
             <div className="flex items-center gap-8 mt-5 md:mt-10">
